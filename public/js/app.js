@@ -5,7 +5,8 @@ define(['simplecors'], function (CORS) {
         initialize: function() {
             this.$button = $('button');
             this.$output = $('output');
-            this.postsUrl = 'http://dev.dnsdojo.com/sablog/posts';
+            // this.postsUrl = 'http://dev.dnsdojo.com/sablog/posts';
+            this.postsUrl = '//go.dosa.northwestern.edu/shared/sablog/posts';
             this.registerEvents();
         },
         registerEvents: function() {
