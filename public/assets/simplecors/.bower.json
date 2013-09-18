@@ -1,0 +1,16 @@
+{
+  "name": "simplecors",
+  "version": "0.0.5",
+  "description": "A shim library, with fallbacks for IE9, to make simple header-less GET cors calls returning a json object.",
+  "main": "simplecors.js",
+  "homepage": "https://github.com/nusait/simplecors",
+  "_release": "0.0.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.5",
+    "commit": "ef6b64af96dbc40d965a2cde6ac58afdf77b4be6"
+  },
+  "_source": "git://github.com/nusait/simplecors.git",
+  "_target": "*",
+  "_originalSource": "simplecors"
+}

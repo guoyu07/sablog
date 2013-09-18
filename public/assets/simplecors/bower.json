@@ -1,0 +1,6 @@
+{
+  "name": "simplecors",
+  "version": "0.0.5",
+  "description": "A shim library, with fallbacks for IE9, to make simple header-less GET cors calls returning a json object.",
+  "main": "simplecors.js"
+}

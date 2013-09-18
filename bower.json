@@ -1,0 +1,10 @@
+{
+  "name": "sablog",
+  "version": "0.0.1",
+  "main": "public/js/main.js",
+  "dependencies": {
+    "jquery": "2.0.3",
+    "requirejs": "2.1.8",
+    "simplecors": "*"
+  }
+}
