@@ -55,10 +55,14 @@ Route::get('posts', function() {
 
         $avatar = (string) $item->children('http://search.yahoo.com/mrss/')->attributes()->url;
 
+        $description = (string) $item->description;
+        $description = preg_replace('/<img.*>/', '', $description );
+
+
         array_push($itemsArray, [
             'pubDate' => $dateString,
             'link'    => (string) $item->link,
-            'description' => (string) $item->description,
+            'description' => (string) $description,
             'title'   => (string) $item->title,
             'creator' => (string) $item->children('http://purl.org/dc/elements/1.1/')->creator,
             'avatar'  => $avatar
