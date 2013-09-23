@@ -67,7 +67,28 @@ Route::get('posts', function() {
             'creator' => (string) $item->children('http://purl.org/dc/elements/1.1/')->creator,
             'avatar'  => $avatar
         ]);
+
+
     }
+
+    // quick fix to add other's avatars:
+    $jamesAvatar = 'https://go.dosa.northwestern.edu/shared/redesign/public/img/avatars/james.png';
+    $laraAvatar  = 'https://go.dosa.northwestern.edu/shared/redesign/public/img/avatars/lara.jpg';
+    foreach ($itemsArray as &$item)
+    {
+        if ($item['creator'] === 'Chris Walker')
+        {
+            if ($item['title'] == 'Views from the Cube: Singapore Lyric Opera & Flyinginkpot.com Intern Lara Saldanha')
+            {
+                $item['avatar'] = $laraAvatar;
+            }
+            if ($item['title'] == 'Welcome to the Student Blog')
+            {
+                $item['avatar'] = $jamesAvatar;
+            }
+        }
+    }
+
     $firstTwoItems = [$itemsArray[0], $itemsArray[1]];
     return Response::json($firstTwoItems);
 });
